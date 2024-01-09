@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NLog;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,31 +13,51 @@ namespace Selenium_test.WebDriverExtention
 {
 	public static class WebDriverExtention
 	{
+		private static NLog.Logger logger = LogManager.GetCurrentClassLogger();
 		public static IWebDriver driver;
-		public static void EnterText(this IWebDriver driver, By locator, string value)
+		public static void EnterText(this IWebDriver driver, By locator, string value, string name)
 		{
-			IWebElement ele = driver.FindElement(locator);
-			if(ele.Displayed && ele.Enabled)
+			try
 			{
-				ele.Clear();
-				ele.SendKeys(value);
+				IWebElement ele = driver.FindElement(locator);
+				if (ele.Displayed && ele.Enabled)
+				{
+					logger.Info("Enter {0}, {1} :", name, value);
+					ele.Clear();
+					ele.SendKeys(value);
+				}
+			}
+			catch (Exception e) {
+				logger.Error("Inable to enter in {0}", name + ":" + e.Message);
+				throw;
 			}
 		}
 
-		public static void Click(this IWebDriver driver, By locator)
+		public static void Click(this IWebDriver driver, By locator, string name)
 		{
-			IWebElement ele = driver.FindElement(locator);
-			if(ele.Displayed && ele.Enabled)
+			try
 			{
-				ele.Click();
+				IWebElement ele = driver.FindElement(locator);
+				if (ele.Displayed && ele.Enabled)
+				{
+					logger.Info("Click on {0}", name);
+					ele.Click();
+				}
 			}
+			catch (Exception e)
+			{
+				logger.Error("Unable to click {0}", name + ":" + e.Message);
+				throw;
+			}
+			
 		}
 
-		public static bool IselementDisplayed(this IWebDriver driver, By locator)
+		public static bool IselementDisplayed(this IWebDriver driver, By locator, string name)
 		{
 			IWebElement ele = driver.FindElement(locator);
 			if (ele.Displayed)
 			{
+				logger.Info(name + "Element is displayed");
 				return true;
 			}
 			return true;

@@ -23,20 +23,24 @@ namespace Selenium_test.Pages
 		public static readonly By passwordtxt = By.Id("Password");
 		public static readonly By Loginbtn = By.CssSelector("input.button-1.login-button");
 
+		public readonly string emailnm = "Email Address";
+		public readonly string passwordnm = "Password";
+		public readonly string loginnm = "Login Button";
+
 
 		public void EnterEmailAddress(String email)
 		{
-			driver.EnterText(emailtxt, email);
+			driver.EnterText(emailtxt, email, emailnm);
 		}
 
 		public void EnterPassword(String password)
 		{
-			driver.EnterText(passwordtxt, password);
+			driver.EnterText(passwordtxt, password, passwordnm);
 		}
 
 		public void ClickLoginButton()
 		{
-			driver.Click(Loginbtn);
+			driver.Click(Loginbtn, loginnm);
 		}
 	}
 }

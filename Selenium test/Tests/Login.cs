@@ -11,7 +11,7 @@ namespace Selenium_test.Tests
 	{
 		Home_Page homePage;
 		LoginPage loginPage;
-		[TestCategory("smoke")]
+		[TestCategory("Smoke")]
 		[TestMethod]
 		public void VerifiedLoginFunctionalityWithValidData()
 		{

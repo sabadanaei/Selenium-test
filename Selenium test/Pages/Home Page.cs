@@ -26,11 +26,15 @@ namespace Selenium_test.Pages
 		public static readonly By RegisterLink = By.ClassName("ico-register");
 		public static readonly By LoginLink = By.ClassName("ico-login");
 
+		private static string registerLinknm = "Register Llink";
+		private static string loginLinknm = "Login Llink";
+
+
 		public void ClickRegisterLink() {
-			driver.Click(RegisterLink);
+			driver.Click(RegisterLink, registerLinknm);
 		}
 		public void ClickLoginLink() {
-			driver.Click(LoginLink);
+			driver.Click(LoginLink, loginLinknm);
 		}
 
 	}

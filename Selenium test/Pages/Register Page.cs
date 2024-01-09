@@ -33,36 +33,36 @@ namespace Selenium_test.Pages
 
 		public void SelectFemaleGender()
 		{
-			driver.Click(gendrFemale);
+			driver.Click(gendrFemale, "");
 		}
 
 		public void enterfirstName(String value)
 		{
-			driver.EnterText(firstName, value);
+			driver.EnterText(firstName, value, "");
 		}
 
 		public void enterLastName(String value)
 		{
-			driver.EnterText(lastName, value);
+			driver.EnterText(lastName, value, "");
 		}
 
 		public void enterEmail(String value)
 		{
-			driver.EnterText(emailAddress, value);
+			driver.EnterText(emailAddress, value, "");
 		}
 
 		public void enterPassword(String pass)
 		{
-			driver.EnterText(password, pass);
+			driver.EnterText(password, pass, "");
 		}
 
 		public void EnterconfirmPassword(String pass)
 		{
-			driver.EnterText(confirmPassword, pass);
+			driver.EnterText(confirmPassword, pass, "");
 		}
 
 		public void clickRegisterBtn() {
-			driver.Click(registerButton);
+			driver.Click(registerButton, "");
 		}
 
 		public String getSuccessfullMessage()
@@ -77,7 +77,7 @@ namespace Selenium_test.Pages
 
 		public void clickLogOut()
 		{
-			driver.Click(Logout);
+			driver.Click(Logout, "");
 		}
 	}
 }
