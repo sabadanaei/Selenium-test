@@ -187,10 +187,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base Page\Base Class.cs" />
+    <Compile Include="DataModel\RegisterDataModel.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\Register Page.cs" />
     <Compile Include="Pages\Home Page.cs" />
     <None Include="TestData\userdata.json" />
+    <Compile Include="ReadJsonDta.cs" />
     <Compile Include="Tests\Register.cs" />
     <Compile Include="Tests\Login.cs" />
     <Compile Include="UnitTest1.cs" />
