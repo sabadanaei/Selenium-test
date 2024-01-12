@@ -1,0 +1,33 @@
+﻿{
+	"Register": [
+
+		{
+			"FistName": "Saba",
+			"LastName": "Danaei",
+			"Email": "ssabadanaei@gmail.com",
+			"Password": "saba12345"
+		},
+
+		{
+			"FistName": "Saba",
+			"LastName": "Danaee",
+			"Email": "sabadanaei@gmail.com",
+			"Password": "saba12345"
+		},
+
+		{
+			"FistName": "sara",
+			"LastName": "Danaee",
+			"Email": "saradanaei@gmail.com",
+			"Password": "saba12345"
+		},
+
+		{
+			"FistName": "Ali",
+			"LastName": "Alavi",
+			"Email": "alialavi@gmail.com",
+			"Password": "saba12345"
+		}
+
+	]
+}
